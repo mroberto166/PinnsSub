@@ -95,16 +95,16 @@ for i in range(len(folders)):
     if sys.platform == "linux" or sys.platform == "linux2" or sys.platform == "darwin":
         if cluster == "true":
             if mode == "ensemble":
-                string_to_exec = "bsub -W 00:10 python3 EnsambleTraining.py "
+                string_to_exec = "bsub -W 00:10 python3 EnsembleTraining.py "
             elif mode == "resampling":
-                string_to_exec = "bsub -W 00:10 python3 SampleSenitivity.py "
+                string_to_exec = "bsub -W 00:10 python3 SampleSensitivity.py "
             else:
                 raise ValueError()
         else:
             if mode == "ensemble":
                 string_to_exec = "python3 EnsambleTraining.py "
             elif mode == "resampling":
-                string_to_exec = "python3 SampleSenitivity.py "
+                string_to_exec = "python3 SampleSensitivity.py "
             else:
                 raise ValueError()
         for arg in arguments:
@@ -112,5 +112,5 @@ for i in range(len(folders)):
         os.system(string_to_exec)
     else:
         python = os.environ['PYTHON36']
-        p = subprocess.Popen([python, "EnsambleTraining.py"] + arguments)
+        p = subprocess.Popen([python, "EnsembleTraining.py"] + arguments)
         p.wait()

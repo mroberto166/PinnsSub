@@ -6,19 +6,20 @@ from ImportFile import *
 
 ###############################################
 # Convergence Analysis for PINNS
-# N_coll = [1000, 2000, 4000, 8000, 16000]
-# N_u = [16, 32, 64, 128, 512]
-# N_int = [0]
+N_coll = [1000, 2000, 4000, 8000, 16000]
+N_u = [16, 32, 64, 128, 512]
+N_int = [0]
 
 ###############################################
 # Resampling for Inverse Problem
 # TO DO: merge the two
-N_coll = np.array([int(sys.argv[1])])
-N_u = np.array([int(sys.argv[2])])
-N_int = np.array([int(sys.argv[3])])
-print(N_coll)
-print(N_int)
+# N_coll = np.array([int(sys.argv[1])])
+# N_u = np.array([int(sys.argv[2])])
+# N_int = np.array([int(sys.argv[3])])
+# print(N_coll)
+# print(N_int)
 
+# See file EnsambleTraining for the description of the parameters.
 n_time_steps = 0
 n_object = 0
 ob = "None"
@@ -41,25 +42,10 @@ network_properties = {
 shuffle = "false"
 cluster = sys.argv[5]
 
-'''
-
-N_coll = [int(500*(1/validation_size)), int(1000*(1/validation_size)), int(2000*(1/validation_size)), int(4000*(1/validation_size)), int(8000*(1/validation_size))]
-N_u = [int(25*(1/validation_size)),  int(50*(1/validation_size)), int(200*(1/validation_size)), int(400*(1/validation_size)), int(800*(1/validation_size))]
-N_int = [0]
-
-N_coll = [200, 800, 3200, 12800, 25600]
-N_u = [100, 200, 400, 800, 1600]
-N_int = [0]
-'''
-
-# N_coll = [2000]
-# N_u = [200]
-# N_int = [0]
-
 if not os.path.isdir(folder_name):
     os.mkdir(folder_name)
-'''settings = list(itertools.product(N_coll, N_u, N_int))
-'''
+settings = list(itertools.product(N_coll, N_u, N_int))
+
 
 # for setup in settings:
 for i in range(N_coll.shape[0]):

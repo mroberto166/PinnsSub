@@ -5,19 +5,32 @@ import subprocess
 from ImportFile import *
 
 rs = 0
+# Number of collocation points (where the PDE is enforced)
 N_coll = int(sys.argv[1])
+# Number of initial and boundary points
 N_u = int(sys.argv[2])
+# Number of internal points (neither boundaries or initial points) where the solution of the PDE is known
 N_int = int(sys.argv[3])
+
+# TO DO: remove n_time_steps (not used)
 n_time_steps = 0
-n_object = 0
+
+# TO DO: Add or not an object in the domain (only circles and squares)
 ob = "None"
+# number of points at the surface of an object in the domain
+n_object = 0
+
 time_dimensions = 0
+# Dimensions of parameter space (for UQ). Not used in the experiments of the paper
 parameter_dimensions = 0
+# Number of output dimension of the newtwork
 n_out = 1
 folder_name = sys.argv[4]
+# Type of points (random or sobol)
 point = "sobol"
 validation_size = 0.0
 
+# Hyperparameters configurations for ensamble training
 network_properties = {
     "hidden_layers": [4, 8, 10],
     "neurons": [16, 20, 24],
@@ -30,6 +43,7 @@ network_properties = {
 }
 
 shuffle = "false"
+# Run on cluster
 cluster = sys.argv[5]
 
 if not os.path.isdir(folder_name):

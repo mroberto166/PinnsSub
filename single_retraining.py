@@ -29,7 +29,7 @@ network_properties = json.loads(sys.argv[14])
 shuffle = sys.argv[15]
 cluster = sys.argv[16]
 
-n_retrain = 1
+n_retrain = 5
 seeds = list()
 seeds.append(42)
 for i in range(n_retrain - 1):

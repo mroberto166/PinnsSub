@@ -8,9 +8,10 @@ os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 def initialize_inputs(len_sys_argv):
     if len_sys_argv == 1:
 
+        # See file EnsambleTraining for the description of the parameters.
+
         # Random Seed for sampling the dataset
         sampling_seed_ = 32
-
         # Number of training+validation points
         n_coll_ = 2048
         n_u_ = 256
@@ -41,6 +42,7 @@ def initialize_inputs(len_sys_argv):
             "epochs": 1,
             "activation": "tanh"
         }
+        # Random seed for the initialization of the weights
         retrain_ = 128
         shuffle_ = False
 
