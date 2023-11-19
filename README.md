@@ -42,3 +42,14 @@ The code can be also run for a single configuration of the hyperaparmters and a 
 
 Parameters have to be specified in the corresponding file.
 
+
+
+This will display your Python code in a nicely formatted block with Python syntax highlighting.
+
+3. **Referencing Specific Lines from a File:** If you want to reference specific lines from a file in your repository, you can use GitHub's permalinks. However, these permalinks can't be directly displayed as code in your README. Instead, they will be links that users can click to view the specific part of the code in your repository.
+
+For example, to link to lines 5 to 9 in `CollectEnsembleData.py`, you would use this Markdown:
+
+```markdown
+[View lines 5-9 in CollectEnsembleData.py](https://github.com/mroberto166/PinnsSub/blob/338c5400080ba570fd8f53d7481539225fcf4d17/CollectEnsembleData.py#L5-L9)
+
