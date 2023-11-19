@@ -1,4 +1,4 @@
-# **Physic Informed Neural Network**
+# **Physic Informed Neural Networks**
 ![](Data/diagram-20231119.png)
 This repository is dedicated to Physics-Informed Neural Networks (PINNs), and it offers a versatile platform for solving a broad spectrum of Partial Differential Equations (PDEs). 
 It encapsulates the capability to implement and explore all the problems described in the follwing research papers.
