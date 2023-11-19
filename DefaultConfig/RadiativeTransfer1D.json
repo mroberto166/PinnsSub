@@ -1,0 +1,29 @@
+{
+    "sampling_seed": 128,
+    "n_int": 8192,
+    "n_u": 2048,
+    "n_ob": 0,
+    "folder_path": "RadiativeTransfer1D",
+    "network_hyperparameters": {
+        "hidden_layers": 8,
+        "neurons": 24,
+        "activation": "tanh",
+        "adaptive": 0,
+        "n": 1,
+        "retrain": 4
+    },
+    "additional_hyper_parameters": {
+        "residual_parameter": 0.1,
+        "p_regularization": 2,
+        "regularization_parameter": 0,
+        "batch_size": "n_int + n_u + n_ob",
+        "epochs_LBFGS": 1,
+        "max_iter_LBFGS": 5000,
+        "learning_rate": 0.1,
+        "epochs_adam": 0,
+        "learning_rate_adam": 0.001,
+        "point": "sobol",
+        "lambda_orth": 1000,
+        "lambda_norm": 100
+    }
+}

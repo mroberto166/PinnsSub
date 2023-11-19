@@ -1,2 +1,10 @@
 .DS_*
 .idea
+EquationModelsOld
+EigenTest
+copy.sh
+ModelSelection.py
+EquationModels/RadiativeTransfer.py
+Data/integrated_solution_n8.vtu
+vis.sh
+__pycache__/
