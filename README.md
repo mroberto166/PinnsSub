@@ -440,5 +440,5 @@ The additional files offer guidance in various scenarios:
   1. Tackling an inverse problem (data assimilation problem).
 - **EigenValueProblem1D.py**:
   1. Utilization of a custom fit and loss function.
-  2. Employment of an additional network to approximate other elements of the PDE. For instance, a network for the eigenvalue \(\lambda\) is used. This approach is particularly beneficial for solving other inverse problems aimed at approximating both the solution and additional coefficients in the PDE.
-tional network to approximate other pieces of the PDE. In this case we use network for the eigenvalue $\lambda$. This might be particularly convenient for solving other inverse problem, which aim at approximating both the solution and additional coefficient in the PDE:
+  2. Employment of an additional network to approximate other elements of the PDE. For instance, a network for the eigenvalue $(\lambda)$ is used. This approach is particularly beneficial for solving other inverse problems aimed at approximating both the solution and additional coefficients in the PDE.
+tional network to approximate other pieces of the PDE. In this case we use network for the eigenvalue $\lambda$. This might be particularly convenient for solving other inverse problem, which aim at approximating both the solution and additional coefficient in the PDE.
