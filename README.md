@@ -250,6 +250,11 @@ def add_initial_points(self, n_initial, random_seed):
         return inputs, outputs
 ```
 In our approach, Cartesian Grid points serve as the training samples. Alternatively, the `SquareDomain` class can automate this process. For example, refer to `EigenValueProblem1D.py` to see it in action. `SquareDomain` provides convenient built-in functions to distribute training sample points across the spatial boundaries and to apply boundary conditions for rectangular domains.
+Observe that the training input samples have all common structure:
+- they are tensors of shape $(n, 2)$
+- the first column is the time variable.
+- the second column is the space variable.
+This is default practice when defining the input tensors for more general problem: time -> space -> other features.
 
 **Step 2. Residuals.** The residuals, boundary residuals and PDE residuals are computed through:
 
