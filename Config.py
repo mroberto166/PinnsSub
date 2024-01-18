@@ -12,7 +12,6 @@ def initialize_inputs(len_sys_argv):
     #    - RadiativeTransfer1D
     #    - PoissonDAP
     #    - EigenValueProblem1D
-    #    - RadiativeTransferEigen
     module_name = "HeatEquation"
 
     # Dynamic import of EquationClass

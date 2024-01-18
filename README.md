@@ -446,3 +446,10 @@ The additional files offer guidance in various scenarios:
 - **EigenValueProblem1D.py**:
   1. Utilization of a custom fit and loss function.
   2. Employment of an additional network to approximate other elements of the PDE. For instance, a network for the eigenvalue $\lambda$ is used. This approach is particularly beneficial for solving other inverse problems aimed at approximating both the solution and additional coefficients in the PDE.
+
+
+#### Requirements
+The code is based on python 3 (version > 3.10) and the packages required can be installed with
+```
+python3 -m pip install -r requirements.txt
+```
