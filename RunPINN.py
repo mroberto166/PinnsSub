@@ -116,7 +116,8 @@ optimizer_LBFGS = optim.LBFGS(equation_class.params,
                               history_size=100,
                               line_search_fn="strong_wolfe",
                               tolerance_grad=1.0 * np.finfo(float).eps,
-                              tolerance_change=1.0 * np.finfo(float).eps)
+                              tolerance_change=1.0 * np.finfo(float).eps
+                              )
 
 optimizer_ADAM = optim.Adam(equation_class.params,
                             lr=float(additional_hyper_parameters["learning_rate_adam"]),
@@ -142,7 +143,7 @@ print("################################################")
 
 # #############################################################################################################################################################
 # Plotting ang Assessing Performance
-equation_class.save_model(folder_path)
+equation_class.save_model(folder_path + "/model_final.pkl")
 equation_class.plotting(folder_path)
 tot_error, rel_tot_error = equation_class.compute_generalization_error(folder_path)
 errors["tot_error"] = tot_error

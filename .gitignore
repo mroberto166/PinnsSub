@@ -1,10 +1,13 @@
 .DS_*
 .idea
+*.png
 EquationModelsOld
 EigenTest
 copy.sh
 ModelSelection.py
 EquationModels/RadiativeTransfer.py
 Data/integrated_solution_n8.vtu
+CodeIntPrep
+TrainedModels
 vis.sh
 __pycache__/

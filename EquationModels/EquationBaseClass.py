@@ -183,7 +183,11 @@ class EquationBaseClass:
             train_losses[1] = loss_vars
             train_losses[2] = loss_pde
             if iteration[0] % 500 == 0:
-                self.save_model(folder)
+                # self.save_model(folder + f"/model{iteration[0]}.pkl")
+                if iteration[0] < 5001:
+                    self.save_model(folder + f"/model{iteration[0]}.pkl")
+                else:
+                    self.save_model(folder + f"/model.pkl")
             iteration[0] = iteration[0] + 1
 
             return loss_f
@@ -299,8 +303,8 @@ class EquationBaseClass:
        Args:
          folder_path: Path to the folder where the model and its state dictionary will be saved.
        """
-        torch.save(self.model, folder_path + "/model.pkl")
-        torch.save(self.model.state_dict(), folder_path + "/model_state_dict.pkl")
+        torch.save(self.model, folder_path)
+        # torch.save(self.model.state_dict(), folder_path + "/model_state_dict.pkl")
 
     def regularization_lp(self, p):
         """

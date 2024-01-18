@@ -1,15 +1,14 @@
-import torch
 import numpy as np
 import sobol_seq
-from pyDOE import lhs
+import torch
 
 
 def generator_points(samples, dim, random_seed, type_of_points, boundary):
     if type_of_points == "random":
         torch.random.manual_seed(random_seed)
         return torch.rand([samples, dim]).type(torch.FloatTensor)
-    elif type_of_points == "lhs":
-        return torch.from_numpy(lhs(dim, samples=samples, criterion='center')).type(torch.FloatTensor)
+    # elif type_of_points == "lhs":
+    #    return torch.from_numpy(lhs(dim, samples=samples, criterion='center')).type(torch.FloatTensor)
     elif type_of_points == "gauss":
         if samples != 0:
 
